@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+	<style>
+    	#dish {
+            color: blue;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        body {
+        	padding: 20px;
+        }
+        .container {
+            border: 2px solid blue;
+            max-width: 57%;
+            margin: 0 auto;
+            padding: 5px 20px;
+            text-align: center;
+        }
+        button {
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 8px 16px;
+            width: auto;
+            border: none;
+            cursor: pointer;
+        }
+        h1 {
+            text-transform: uppercase;
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Click vô nút bên dưới để chọ món ăn ngẫu nhiên</h1>
+
+    <button onclick="randomDish()">Chọn món ăn</button>
+
+    <p id="dish">Bạn chưa chọn</p>
+</div>
+
+<script>
+    function randomDish() {
+    	var arr = ['Cơm gà', 'Hủ tiếu bò kho', 'Hủ tiếu mực', 'Bánh mì bò', 'Bánh mì trứng', 'Phở bò'];
+        var x = Math.floor((Math.random()*5));
+        document.getElementById("dish").innerHTML = arr[x];
+    }
+</script>
+
+</body>
+</html>
